@@ -3,3 +3,21 @@
 function test_function(){
     echo "Hello from test!"
 }
+
+function help(){
+    echo "Usage"
+}
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h | --help | help )
+            help
+            shift 1
+            ;;
+        * )
+            echo "Unknown command"
+            shift 1
+            help
+            ;;
+    esac
+done
