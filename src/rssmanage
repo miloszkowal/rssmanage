@@ -1,0 +1,5 @@
+#/bin/bash
+
+function test_function(){
+    echo "Hello from test!"
+}
