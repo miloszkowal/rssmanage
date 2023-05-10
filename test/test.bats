@@ -5,7 +5,7 @@ function setup() {
     load 'test_helper/bats-assert/load'
 }
 
-@test "Can run the script" {
+@test "Test script invocation" {
     ./src/rssmanage
 }
 
@@ -17,4 +17,9 @@ function setup() {
 @test "Test help invocation using short" {
    run ./src/rssmanage -h
    assert_output --partial "Usage" 
+}
+
+@test "Test help invocation using unknown param" {
+    run ./src/rssmanage asdf
+    assert_output --partial "Unknown"
 }
