@@ -1,8 +1,4 @@
-#/bin/bash
-
-function test_function(){
-    echo "Hello from test!"
-}
+#!/bin/bash
 
 function help(){
     echo "Usage"

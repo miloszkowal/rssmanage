@@ -31,5 +31,5 @@ jobs:
       - name: Setup BATS libraries
         uses: brokenpip3/setup-bats-libs@0.1.0
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Run BATS test
         run: bats test/test.bats
